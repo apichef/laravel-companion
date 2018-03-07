@@ -46,7 +46,7 @@ class JsonApiResponse implements Responsable
     private function transform($request)
     {
         $manager = new Manager();
-        $manager->setSerializer(new JsonApiSerializer());
+        $manager->setSerializer(new JsonApiSerializer(config('sarala.base_url')));
 
         if ($this->data instanceof LengthAwarePaginator) {
             $resource = new ResourceCollection($this->data->getCollection(), $this->transformer, $this->resourceKey);

@@ -1,22 +1,8 @@
 # Changelog
 
-All notable changes to `JsonApiCompanion` will be documented in this file.
+All notable changes to `sarala-io/laravel-companion` will be documented in this file.
 
-Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
-
-## NEXT - YYYY-MM-DD
+## v0.0.2 - 2018-03-08
 
 ### Added
-- Nothing
-
-### Deprecated
-- Nothing
-
-### Fixed
-- Nothing
-
-### Removed
-- Nothing
-
-### Security
-- Nothing
+- Made config file publishable

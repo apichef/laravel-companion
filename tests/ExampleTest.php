@@ -32,9 +32,18 @@ class ExampleTest extends TestCase
         $request = Request::create('', 'GET', $params);
         $query = new PostsFilter($request);
         $data = Post::filter($query)->paginateOrGet($request);
-        $res = new JsonApiResponse($data, new PostTransformer(), 'posts');
+        $response = (new JsonApiResponse($data, new PostTransformer(), 'posts'))
+            ->toResponse($request)
+            ->original;
 
-        $this->assertEquals(4, $data->count());
+        $this->assertEquals([
+            'data',
+            'included',
+            'meta',
+            'links'
+        ], array_keys($response));
+
+        $this->assertEquals(4, count($response['data']));
     }
 
     private function seedDB()
