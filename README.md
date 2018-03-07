@@ -28,13 +28,13 @@ vendor/
 Via Composer
 
 ``` bash
-$ composer require milroyfraser/laravel-json-api-companion
+$ composer require sarala-io/laravel-companion
 ```
 
 ## Usage
 
 ``` php
-$skeleton = new MilroyFraser\JsonApiCompanion();
+$skeleton = new Sarala();
 echo $skeleton->echoPhrase('Hello, League!');
 ```
 
@@ -65,17 +65,17 @@ If you discover any security related issues, please email milroy.me@gmail.com in
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/milroyfraser/laravel-json-api-companion.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/sarala-io/laravel-companion.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/milroyfraser/laravel-json-api-companion/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/milroyfraser/laravel-json-api-companion.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/milroyfraser/laravel-json-api-companion.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/milroyfraser/laravel-json-api-companion.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/sarala-io/laravel-companion/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/sarala-io/laravel-companion.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/sarala-io/laravel-companion.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/sarala-io/laravel-companion.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/milroyfraser/laravel-json-api-companion
-[link-travis]: https://travis-ci.org/milroyfraser/laravel-json-api-companion
-[link-scrutinizer]: https://scrutinizer-ci.com/g/milroyfraser/laravel-json-api-companion/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/milroyfraser/laravel-json-api-companion
-[link-downloads]: https://packagist.org/packages/milroyfraser/laravel-json-api-companion
+[link-packagist]: https://packagist.org/packages/sarala-io/laravel-companion
+[link-travis]: https://travis-ci.org/sarala-io/laravel-companion
+[link-scrutinizer]: https://scrutinizer-ci.com/g/sarala-io/laravel-companion/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/sarala-io/laravel-companion
+[link-downloads]: https://packagist.org/packages/sarala-io/laravel-companion
 [link-author]: https://github.com/milroyfraser
 [link-contributors]: ../../contributors

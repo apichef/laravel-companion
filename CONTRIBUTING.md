@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/milroyfraser/laravel-json-api-companion).
+We accept contributions via Pull Requests on [Github](https://github.com/sarala-io/laravel-companion).
 
 
 ## Pull Requests

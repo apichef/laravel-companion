@@ -1,11 +1,11 @@
 <?php
 
-namespace MilroyFraser\JsonApiCompanions\Query;
+namespace Sarala;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
-abstract class JsonApiQueryBuilder
+abstract class FilterAbstract
 {
     /** @var Builder $builder */
     protected $builder;

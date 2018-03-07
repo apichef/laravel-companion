@@ -1,6 +1,6 @@
 <?php
 
-namespace MilroyFraser\JsonApiCompanions\Response;
+namespace Sarala;
 
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Contracts\Support\Responsable;
