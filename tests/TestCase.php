@@ -2,6 +2,9 @@
 
 namespace Sarala;
 
+use Illuminate\Http\Request;
+use Illuminate\Foundation\Testing\TestResponse;
+
 class TestCase extends \Orchestra\Testbench\TestCase
 {
     protected function setUp()
@@ -15,6 +18,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
     protected function getEnvironmentSetUp($app)
     {
+        $app['config']->set('sarala.base_url', 'https://sarala-demo.app/api');
         $app['config']->set('database.default', 'testbench');
         $app['config']->set('database.connections.testbench', [
             'driver'   => 'sqlite',
@@ -26,5 +30,15 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [JsonApiServiceProvider::class];
+    }
+
+    protected function getTestJsonApiResponse(JsonApiResponse $response, Request $request): TestResponse
+    {
+        return $this->createTestResponse($response->toResponse($request));
+    }
+
+    protected function getContentFromResponse(TestResponse $response): array
+    {
+        return json_decode($response->getContent(), true);
     }
 }

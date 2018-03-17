@@ -57,7 +57,10 @@ class JsonApiResponse implements Responsable
             $resource = new Item($this->data, $this->transformer, $this->resourceKey);
         }
 
-        $manager->parseIncludes($request->get('include'));
+        if ($request->filled('include')) {
+            $manager->parseIncludes($request->get('include'));
+        }
+
         $data = $manager->createData($resource)->toArray();
 
         return $this->sparseFields($data, $request->get('fields', []));

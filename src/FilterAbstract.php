@@ -15,6 +15,11 @@ abstract class FilterAbstract
 
     protected $lookup = [];
 
+    protected $commonFilters = [
+        'limit' => 'limit',
+        'offset' => 'offset',
+    ];
+
     public function __construct(Request $request)
     {
         $this->request = $request;
@@ -42,8 +47,8 @@ abstract class FilterAbstract
     private function applyFilters()
     {
         foreach ($this->getFilters() as $name => $value) {
-            if (isset($this->lookup[$name]) && method_exists($this, $this->lookup[$name])) {
-                $name = $this->lookup[$name];
+            if (isset($this->getFiltersMap()[$name]) && method_exists($this, $this->getFiltersMap()[$name])) {
+                $name = $this->getFiltersMap()[$name];
 
                 if (strlen($value)) {
                     $this->$name($value);
@@ -52,6 +57,11 @@ abstract class FilterAbstract
                 }
             }
         }
+    }
+
+    private function getFiltersMap(): array
+    {
+        return array_merge($this->lookup, $this->commonFilters);
     }
 
     private function applySorts()
@@ -72,5 +82,15 @@ abstract class FilterAbstract
     private function getFilters(): array
     {
         return $this->request->get('filter', []);
+    }
+
+    protected function limit($limit)
+    {
+        return $this->builder->limit($limit);
+    }
+
+    protected function offset($offset)
+    {
+        return $this->builder->offset($offset);
     }
 }

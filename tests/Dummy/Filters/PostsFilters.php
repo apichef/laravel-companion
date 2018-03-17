@@ -4,7 +4,7 @@ namespace Sarala\Dummy\Filters;
 
 use Sarala\FilterAbstract;
 
-class PostsFilter extends FilterAbstract
+class PostsFilters extends FilterAbstract
 {
     protected $lookup = [
         'my' => 'composedByMe'
