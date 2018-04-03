@@ -8,6 +8,7 @@
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![StyleCI](https://styleci.io/repos/123952264/shield?branch=master)](https://styleci.io/repos/123952264)
 
 ## Install
 
