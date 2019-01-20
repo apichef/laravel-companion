@@ -1,3 +1,6 @@
+> Important: This package is not actively maintained. For bug fixes and new features, please fork.
+> or take a look at [sarala-io/sarala](https://sarala-io.github.io/sarala-laravel-docs/guide/)
+
 # Sarala Laravel Companion
 
 > [Laravel](https://github.com/laravel/laravel) support package to easily develop REST API following [JSON API specification](http://jsonapi.org/format/1.1/#document-top-level).
